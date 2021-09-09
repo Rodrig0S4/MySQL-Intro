@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_categoria_games")
@@ -33,6 +36,9 @@ public class Games {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new java.sql.Date(System.currentTimeMillis());
 
+	@ManyToOne
+	@JsonIgnoreProperties("games")
+	private Tema tema;
 	
 	
 	public long getId() {
@@ -66,5 +72,11 @@ public class Games {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	public Tema getTema() {
+		return tema;
+	}
 
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 }
