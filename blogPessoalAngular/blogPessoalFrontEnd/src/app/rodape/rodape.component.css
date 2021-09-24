@@ -1,0 +1,27 @@
+ul.social-network{
+    list-style: nome;
+    padding: 0;
+    }
+
+ul.social-network li{
+display: inline;
+margin: 0;
+padding: 5px;
+}
+
+.fa{
+    font-size: 35pt;
+    color: rgb(231, 237, 241);
+    padding: 10px;
+}
+
+.fa-instagram{
+    color: rgba(180, 8, 94, 0.89);
+}
+
+.fa-github{
+    color: rgb(24, 11, 22);
+}
+.fa-linkedin{
+    color: rgba(0, 98, 184, 0.918);
+}
